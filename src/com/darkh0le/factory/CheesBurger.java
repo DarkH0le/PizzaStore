@@ -8,6 +8,7 @@ public class CheesBurger extends Pizza{
     private List<String> strings = new ArrayList<>(List.of("Pan", "Carne", "Queso"));
 
     public CheesBurger() {
+        System.out.println("Preparando hamburgesa con queso");
         price = 10.99F;
         name = "Hamburguesa con queso";
         prepare();

@@ -3,22 +3,17 @@ package com.darkh0le.store;
 import com.darkh0le.factory.CheesBurger;
 import com.darkh0le.factory.ChickenBurger;
 import com.darkh0le.factory.Pizza;
+import com.darkh0le.factory.SimplePizzaFactory;
 
 public class PizzaStore {
 
-    public String orderPizza(String pizzaType){
+    SimplePizzaFactory factory;
 
-        switch (pizzaType){
-            case "Chees":
-                Pizza chees = new CheesBurger();
-                return chees.toString();
-            case "Chicken":
-                Pizza chicken = new ChickenBurger();
-                return chicken.toString();
-            default:
-                break;
-        }
+    public PizzaStore() {
+        this.factory = new SimplePizzaFactory();
+    }
 
-        return "0";
+    public String orderPizza(String pizza) {
+        return factory.makePizza(pizza);
     }
 }

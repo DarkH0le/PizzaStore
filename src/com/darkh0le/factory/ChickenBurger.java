@@ -13,7 +13,7 @@ public class ChickenBurger extends Pizza {
     private Map<Integer, String> toppings = new HashMap<>();
 
     public ChickenBurger() {
-
+        System.out.println("Preparando hamburgesa de Pollos");
         toppings.put(1, "Pan");
         toppings.put(2, "Carne");
         toppings.put(3, "Queso");
